@@ -16,6 +16,29 @@
         <!-- Header - block -->
         <div class="backdrop is-hidden" data-backdrop>
             <div class="modal">
+                
+                <form class="order-form">
+                    <p class="modal-title">Оставьте свои данные, мы вам перезвоним</p>
+                    
+                    <label for="name">Имя</label>
+                    <input type="text" name="name" id="name">
+
+                    <label for="tel">Телефон</label>
+                    <input type="tel" name="tel" id="tel">
+
+                    <label for="mail">Почта</label>
+                    <input type="email" name="mail" id="mail">
+
+                    <label for="comment">Комментарий</label>
+                    <textarea name="comment" id="comment"  rows="10"></textarea>
+
+                    <div class="modal-accept"> 
+                    <input type="checkbox" name="accept" id="accept">
+                    <label for="accept">Соглашаюсь с рассылкой и принимаю Условия договора</label>
+                    </div>
+
+                    <button type="submit" class="send-btn">Отправить</button>
+                </form>
                 <button class="close-btn" data-modal-close>
                     <img src="./images/close.svg" alt="close-btn">
                 </button>

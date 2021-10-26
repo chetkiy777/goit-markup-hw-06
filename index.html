@@ -47,13 +47,17 @@
                     <label class="field-label" for="comment">Комментарий</label>
                     <textarea class="field-input comment" name="comment" id="comment" placeholder="Введите текст"></textarea>
                     
-                    <div class="modal-accept"> 
-                        <input type="checkbox" name="accept" id="accept"/>
-                        <label  class="accept-label" for="accept">Соглашаюсь с рассылкой и принимаю <span class="doc">Условия договора</span></label>
-                    </div>
+                    
+                    <label class="accept-label" for="accept">
+                    <input class="checkbox" type="checkbox" name="accept" id="accept"/>
+                    <span class="check-icon"></span>
+                    Соглашаюсь с рассылкой и принимаю <span class="doc">Условия договора</span></label>
+                    
+                
 
                     <button type="submit" class="send-btn">Отправить</button>
                 </form>
+
                 <button class="close-btn" data-modal-close>
                     <img src="./images/close.svg" alt="close-btn">
                 </button>
@@ -432,7 +436,7 @@
                 <div class="subscribe">
                     <p class="subscribe-title">Подпишитесь на рассылку</p>
                     <form name="subscribe-form">
-                        <input class="subscribe-input" type="email" placeholder="Email">
+                        <input class="subscribe-input" type="email" placeholder="E-mail">
                         <button class="subscribe-btn" type="submit">Подписаться
                             <svg class="btn-icon" height="24" width="24">
                                 <use href="./images/icons.svg#telegram-btn-icon"></use>

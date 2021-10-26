@@ -7,6 +7,7 @@
   --border-color: #ececec;
   --card-border-color: #eeeeee;
   --accent-color: #2196f3;
+  --modal-bg-color: #e5e5e5;
 }
 
 *,
@@ -115,6 +116,8 @@ h2 {
   line-height: 1.15;
   letter-spacing: 0.03em;
   color: var(--main-text-color);
+
+  margin-bottom: 12px;
 }
 
 .order-form {
@@ -122,9 +125,80 @@ h2 {
   flex-direction: column;
 }
 
+.form-field {
+  position: relative;
+}
+
+.field-input {
+  width: 100%;
+  height: 40px;
+  border: 3px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+
+  margin-bottom: 10px;
+  padding-left: 38px;
+}
+
+.field-input:focus {
+  outline: 1px solid var(--accent-color);
+  border-color: var(--accent-color);
+}
+
+.field-label {
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.01em;
+
+  color: var(--secondary-text-color);
+
+  margin-bottom: 4px;
+}
+
+.icon {
+  position: absolute;
+  top: 30px;
+  left: 15px;
+
+  display: inline-block;
+
+  background-size: contain;
+  fill: var(--main-text-color);
+}
+
+.field-input:focus ~ .icon {
+  fill: var(--accent-color);
+}
+
+.comment {
+  height: 120px;
+  padding: 12px 16px;
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.01em;
+
+  color: rgba(117, 117, 117, 0.5);
+}
+
+.accept-label {
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.03em;
+
+  color: var(--secondary-text-colorS);
+  margin-left: 8px;
+}
+
+.doc {
+  color: var(--accent-color);
+  text-decoration: underline;
+}
+
 .modal-accept {
   display: flex;
   flex-direction: row;
+
+  margin-top: 25px;
 }
 
 .send-btn {
@@ -133,11 +207,11 @@ h2 {
   background-color: var(--accent-color);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
-  outline: none;
   border: none;
 
   margin-top: 30px;
   transform: translateX(60%);
+  cursor: pointer;
 
   text-align: center;
   font-weight: bold;
@@ -788,6 +862,10 @@ h2 {
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
   border-radius: 4px;
   padding: 15px 0 15px 16px;
+  background-color: var(--background-dark-color);
+
+  margin-right: 12px;
+  color: var(--main-white-color);
 }
 
 .subscribe-btn {
@@ -798,10 +876,21 @@ h2 {
   border-radius: 4px;
   border: none;
 
+  cursor: pointer;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
   text-align: center;
   font-weight: bold;
   font-size: 16px;
   line-height: 30px;
   letter-spacing: 0.06em;
   color: var(--main-white-color);
+}
+
+.btn-icon {
+  margin-left: 10px;
+  fill: var(--main-white-color);
 }
